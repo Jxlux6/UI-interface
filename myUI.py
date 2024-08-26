@@ -1,17 +1,21 @@
-# importing tkinter and a messagebox
+# currently just a GUI box with Hello World at the top, and a small text box in the middle
+# will add more later watching tutorial
+# link: https://www.youtube.com/watch?v=ibf5cx221hk
 import tkinter as tk
-from tkinter import messagebox
-
-# tk opens the main window
 
 root = tk.Tk()
-root.title("UI Interface")
 
-# creates message box
-messagebox.showinfo(
-    title="UI Interface",
-    message="TEST UI interface has been opened."
-)
+root.geometry("500x500")
+root.title("my GUI")
 
-# keeps window open until closed by user
+label = tk.Label(root, text="Hello World", font=('Arial', 18))
+label.pack(padx=20, pady=40)
+
+textbox = tk.Text(root, height=3)
+textbox.pack()
+
+
+
+
 root.mainloop()
+
